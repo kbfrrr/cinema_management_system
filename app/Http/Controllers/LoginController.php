@@ -35,7 +35,6 @@ class LoginController extends Controller
         // Redirect based on role
         return match($user->role->role_name) {
             'admin'  => redirect()->route('admin.dashboard'),
-            'staff'  => redirect()->route('admin.dashboard'),
             default => redirect()->route('customer.home'),
         };
     }

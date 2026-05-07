@@ -23,7 +23,6 @@
                    focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
             <option value="">All roles</option>
             <option value="admin"    {{ request('role') === 'admin'    ? 'selected' : '' }}>Admin</option>
-            <option value="staff"    {{ request('role') === 'staff'    ? 'selected' : '' }}>Staff</option>
             <option value="customer" {{ request('role') === 'customer' ? 'selected' : '' }}>Customer</option>
         </select>
         <button type="submit"
@@ -72,9 +71,7 @@
                                 <span class="px-2 py-1 rounded-full text-xs font-medium
                                     {{ $user->role->role_name === 'admin'
                                         ? 'bg-purple-500/10 text-purple-400'
-                                        : ($user->role->role_name === 'staff'
-                                            ? 'bg-blue-500/10 text-blue-400'
-                                            : 'bg-gray-500/10 text-gray-400') }}">
+                                        : 'bg-green-500/10 text-gray-400' }}">
                                     {{ ucfirst($user->role->role_name) }}
                                 </span>
                             </td>
