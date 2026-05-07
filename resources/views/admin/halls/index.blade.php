@@ -40,11 +40,11 @@
                                     class="px-3 py-1 bg-gray-700 hover:bg-gray-600 text-white text-xs rounded-lg transition">
                                     Edit
                                 </a>
-                                <a href="{{ route('admin.hall-seats.index', $hall->hall_id) }}"
-                                class="px-3 py-1 bg-teal-500/10 hover:bg-teal-500/20 text-teal-400 text-xs rounded-lg transition">
-                                Seats
-                            </a>
-                        <form method="POST" action="{{ route('admin.halls.destroy', $hall->hall_id) }}"
+                                <a href="{{ route('admin.halls.seats.index', $hall->hall_id) }}"
+                                    class="px-3 py-1 bg-teal-500/10 hover:bg-teal-500/20 text-teal-400 text-xs rounded-lg transition">
+                                    Seats
+                                </a>
+                                <form method="POST" action="{{ route('admin.halls.destroy', $hall->hall_id) }}"
                             onsubmit="return confirm('Delete this hall?')">
                             @csrf @method('DELETE')
                             <button type="submit"
